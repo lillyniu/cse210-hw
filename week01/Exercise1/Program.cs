@@ -5,12 +5,12 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Exercise1 Project.");
-        Console.Writeline("What is your first name?");
-        string first = Console.readline();
+        Console.WriteLine("What is your first name?");
+        string first = Console.ReadLine();
 
-        Console.writeline("What is your last name? ");
-        string last = Console.readline();
+        Console.WriteLine("What is your last name? ");
+        string last = Console.ReadLine();
 
-        Console.writeline($"Your name is {first} {last}. ");
+        Console.WriteLine($"Your name is {first} {last}. ");
     }
 }
