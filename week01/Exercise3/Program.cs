@@ -8,18 +8,18 @@ class Program
         Random randomGenerator = new Random();
         int number = randomGenerator.Next(1,101);
 
+        Console.Write("Try to guess the magic number: ");
+        string valueFromUser = Console.ReadLine();
+        int guess = int.Parse(valueFromUser);
+
         do
         {
-            Console.Write("Try to guess the magic number: ")
-            int guess = Console.ReadLine();
-
-            if (guess > number);
-                Console.WriteLine("lower")
+            if (guess > number)
+                Console.WriteLine("lower");
             else if(guess < number)
-            Console.WriteLine("higher")
+                Console.WriteLine("higher");
 
         } while (guess != number);
-        Console.WriteLine("Congrats! You guessed the magic number! ")
-    
-}
+        Console.WriteLine("Congrats! You guessed the magic number! ");
+    }
 }
