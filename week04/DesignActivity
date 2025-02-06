@@ -1,0 +1,86 @@
+
+YouTubeVideo Program
+1. This program is designed to track information regarding the actual video & the amount of comments. It will track ther title, author, length & comments of the videos. Then it will also collect info on the comments like the text & the author.
+2. The candidate classes are Video & Comment.
+3. The responsibility for the Video class is to collect information pertaining to that video as listed above, & the comment class will get the name of the author & retrieve the text.
+
+
+- Class Design Diagram:
+
+Video                       
+===============        
+_title: string                        
+_author: string                          
+_length: int                            
+_comments: List<Comment>                
+===============                                
+GetTitle(): string                       
+GetAuthor(): string                    
+GetLength(): int             
+AddComment(comment: Comment) 
+GetCount(): int              
+DisplayInfo(): void          
+
+
+ Comment
+ ============== 
+ _name: string
+ _text: string
+ ==============
+ GetName(): string
+ GetText(): string
+
+
+OnlineOrdering program
+1. The program handles product orders for an online store and calculates the total price of the order, generates packing labels, and shipping labels based on customer's information. Differentiates the shipping costs based on if the customer is in USA or foreign.
+2. The candidate classes are Order, Customer, Product & Address.
+3. The Order class contains a list of Product objects and a Customer object calculates the total cost of the order, generates a packing label with info generates a shipping label (includes customer’s name and address).
+- Product: Tracks the name, product ID, price, and quantity and calculates the total cost based on price and quantity.
+- Customer: Tracks the customer’s name and address with a method to check if the customer is in the USA.
+- Address: tracks street address, city, state/province, and country, a method to check if the address is in the USA and a method to return a formatted string for the full address.
+
+
+- Class Diagram
+
+Product         
+===============
+_name: string                  
+_price: decimal                 
+_productId: int                
+_quantity: int                  
+===============
+GetName(): string               
+GetProductId(): int             
+GetTotalCost(): decimal        
+
+          
+Order
+===============
+_customer: Customer      
+_products: List<Product> 
+===============
+GetTotalPrice(): decimal 
+GetPackLabel(): string   
+GetShipLabel(): string   
+
+
+Address
+============
+_street: string
+_city: string
+_stateProvince: string
+_country: string
+=============
+InUSA(): bool
+GetFullAddress(): string
+
+    
+Customer       
+==============   
+_name: string         
+_address: Address     
+==============
+LivesInUSA(): bool    
+GetName(): string     
+GetAddress(): string  
+    
